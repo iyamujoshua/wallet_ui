@@ -11,6 +11,27 @@ class homescreen extends StatefulWidget {
 class _homescreenState extends State<homescreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold();
+    return Scaffold(
+      backgroundColor: Colors.grey[300],
+      body: SafeArea(
+        child: Column(
+          children: [
+            //app bar
+            Row(
+              children: [
+                Text("My Cards")
+              ],
+            )
+      
+            // cards
+      
+            //transaction button
+      
+            // column stats + transaction
+      
+          ],
+        ),
+      ),
+    );
   }
 }
