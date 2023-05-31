@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_ui/components/cards.dart';
+import 'package:wallet_ui/components/my_buttons.dart';
 
 class homescreen extends StatefulWidget {
   const homescreen({super.key});
@@ -104,39 +105,42 @@ class _homescreenState extends State<homescreen> {
               height: 25,
             ),
 
-            Row(
-              children: [
-                // send button
-                Column(
-                  children: [
-                    Container(
-                      height: 60,
-                      padding: EdgeInsets.all(10),
-                      decoration: BoxDecoration(
-                          color: Colors.white,
-                          borderRadius: BorderRadius.circular(15)),
-                      child: Center(
-                        child: Image.asset("asset/send-money.png"),
-                      ),
-                    ),
-                    Text(
-                      "Send",
-                      style: TextStyle(
-                        fontSize: 15,
-                      ),
-                    )
-                  ],
-                )
-
-                //pay button
-
-                // bill button
-              ],
-            )
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  // send button
+                 mybuttons(
+                  buttonText: "Send",
+                   iconImagePath: "asset/send-money.png"),
+            
+                  //pay button
+                   mybuttons(
+                  buttonText: "pay",
+                   iconImagePath: "asset/credit-card.png"),
+            
+                  // bill button
+                   mybuttons(
+                  buttonText: "Bill",
+                   iconImagePath: "asset/cash-payment.png"),
+                ],
+              ),
+            ),
 
             //transaction button
 
             // column stats + transaction
+
+            SizedBox(height: 25,),
+            Column(
+              children: [
+                ListTile(
+                  
+                  
+                )
+              ],
+            )
           ],
         ),
       ),
