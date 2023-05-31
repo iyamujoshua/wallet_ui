@@ -58,9 +58,34 @@ class _homescreenState extends State<homescreen> {
 
             // cards
             Container(
-              decoration: BoxDecoration(color: Colors.blue),
+              decoration: BoxDecoration(color: Colors.deepPurple[300],
+              borderRadius: BorderRadius.circular(25)),
               width: 350,
-              height: 250,
+              // height: 250,
+              padding: EdgeInsets.all(25),
+              child: Column(
+                children: [
+                  Text("Balance", style: TextStyle(
+                    color: Colors.white,
+                  ),),
+                  Text("\$5,000.87", style: TextStyle(
+                    color: Colors.white,
+                  ),),
+                  // card info
+                  Row(
+                    children: [
+                      //card number
+                      Text("**** 4199", style: TextStyle(
+                    color: Colors.white,
+                  ),),
+                      // card expiring date
+                      Text("12/23", style: TextStyle(
+                    color: Colors.white,
+                  ),),
+                    ],
+                  )
+                ],
+              ),
             )
 
             //transaction button
