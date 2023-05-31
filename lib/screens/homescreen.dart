@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 import 'package:wallet_ui/components/cards.dart';
 
 class homescreen extends StatefulWidget {
@@ -9,6 +10,7 @@ class homescreen extends StatefulWidget {
 }
 
 class _homescreenState extends State<homescreen> {
+  final _controller = PageController();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -63,32 +65,40 @@ class _homescreenState extends State<homescreen> {
               height: 200,
               child: PageView(
                 scrollDirection: Axis.horizontal,
+                controller: _controller,
                 children: [
                   cards(
-                    balance: 4950.10,
-                    cardNumber: 34498,
-                    expiryMonth: 10,
+                    balance: 4510,
+                    cardNumber: 3798,
+                    expiryMonth: 09,
                     expiryYear: 23,
                     color: Colors.deepPurple[300],
+                    
                   ),
                   cards(
                     balance: 739.35,
-                    cardNumber: 34498,
+                    cardNumber: 6875,
                     expiryMonth: 10,
                     expiryYear: 24,
                     color: Colors.black,
                   ),
                   cards(
                     balance: 2000,
-                    cardNumber: 34498,
-                    expiryMonth: 10,
-                    expiryYear: 25,
+                    cardNumber: 4194,
+                    expiryMonth: 12,
+                    expiryYear: 24,
                     color: Colors.orange[300],
                   ),
                 ],
               ),
-            )
+            ),
+            SizedBox(height: 10,),
 
+            SmoothPageIndicator(
+              controller: _controller,
+               count: 3,
+               effect: ExpandingDotsEffect(),
+               )
 
             //transaction button
 

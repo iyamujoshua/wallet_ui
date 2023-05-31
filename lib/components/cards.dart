@@ -63,7 +63,7 @@ class cards extends StatelessWidget {
                 ),
                 // card expiring date
                 Text(
-                  expiryMonth.toString() + "/" + expiryMonth.toString(),
+                  expiryMonth.toString() + "/" + expiryYear.toString(),
                   style: TextStyle(
                     color: Colors.white,
                   ),
