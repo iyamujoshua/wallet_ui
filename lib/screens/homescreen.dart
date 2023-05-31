@@ -73,7 +73,6 @@ class _homescreenState extends State<homescreen> {
                     expiryMonth: 09,
                     expiryYear: 23,
                     color: Colors.deepPurple[300],
-                    
                   ),
                   cards(
                     balance: 739.35,
@@ -92,13 +91,48 @@ class _homescreenState extends State<homescreen> {
                 ],
               ),
             ),
-            SizedBox(height: 10,),
+            SizedBox(
+              height: 10,
+            ),
 
             SmoothPageIndicator(
               controller: _controller,
-               count: 3,
-               effect: ExpandingDotsEffect(),
-               )
+              count: 3,
+              effect: ExpandingDotsEffect(activeDotColor: Colors.grey.shade700),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+
+            Row(
+              children: [
+                // send button
+                Column(
+                  children: [
+                    Container(
+                      height: 60,
+                      padding: EdgeInsets.all(10),
+                      decoration: BoxDecoration(
+                          color: Colors.white,
+                          borderRadius: BorderRadius.circular(15)),
+                      child: Center(
+                        child: Image.asset("asset/send-money.png"),
+                      ),
+                    ),
+                    Text(
+                      "Send",
+                      style: TextStyle(
+                        fontSize: 15,
+                      ),
+                    )
+                  ],
+                )
+
+                //pay button
+
+                // bill button
+              ],
+            )
 
             //transaction button
 
