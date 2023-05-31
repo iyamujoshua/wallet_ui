@@ -111,19 +111,19 @@ class _homescreenState extends State<homescreen> {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   // send button
-                 mybuttons(
-                  buttonText: "Send",
-                   iconImagePath: "asset/send-money.png"),
-            
+                  mybuttons(
+                      buttonText: "Send",
+                      iconImagePath: "asset/send-money.png"),
+
                   //pay button
-                   mybuttons(
-                  buttonText: "pay",
-                   iconImagePath: "asset/credit-card.png"),
-            
+                  mybuttons(
+                      buttonText: "pay",
+                      iconImagePath: "asset/credit-card.png"),
+
                   // bill button
-                   mybuttons(
-                  buttonText: "Bill",
-                   iconImagePath: "asset/cash-payment.png"),
+                  mybuttons(
+                      buttonText: "Bill",
+                      iconImagePath: "asset/transaction.png"),
                 ],
               ),
             ),
@@ -132,14 +132,60 @@ class _homescreenState extends State<homescreen> {
 
             // column stats + transaction
 
-            SizedBox(height: 25,),
-            Column(
-              children: [
-                ListTile(
-                  
-                  
-                )
-              ],
+            SizedBox(
+              height: 25,
+            ),
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25),
+              child: Column(
+                children: [
+                  ListTile(
+                    // leading: IconButton(icon: Image.asset('asset/'), onPressed: () {},),
+                    title: Text(
+                      "Recent transaction",
+                      style: TextStyle(fontSize: 16, color: Colors.black),
+                    ),
+                    trailing: Image.asset(
+                      "asset/check.png",
+                    ),
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/Notifications');
+                    },
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  ListTile(
+                    // leading: IconButton(icon: Image.asset('asset/'), onPressed: () {},),
+                    title: Text(
+                      "Recent transaction",
+                      style: TextStyle(fontSize: 16, color: Colors.black),
+                    ),
+                    trailing: Image.asset(
+                      "asset/greater-than.png",
+                    ),
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/Notifications');
+                    },
+                  ),
+                                  SizedBox(
+                    height: 20,
+                  ),
+                  ListTile(
+                    // leading: IconButton(icon: Image.asset('asset/'), onPressed: () {},),
+                    title: Text(
+                      "Recent transaction",
+                      style: TextStyle(fontSize: 16, color: Colors.black),
+                    ),
+                    trailing: Image.asset(
+                      "asset/cross.png",
+                    ),
+                    onTap: () {
+                      // Navigator.pushNamed(context, '/Notifications');
+                    },
+                  ),
+                ],
+              ),
             )
           ],
         ),
