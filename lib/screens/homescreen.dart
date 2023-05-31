@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 
 class homescreen extends StatefulWidget {
@@ -17,18 +16,56 @@ class _homescreenState extends State<homescreen> {
         child: Column(
           children: [
             //app bar
-            Row(
-              children: [
-                Text("My Cards")
-              ],
-            )
-      
+            Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 25.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    children: [
+                      Text(
+                        "My",
+                        style: TextStyle(
+                            fontSize: 26, fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        " Cards",
+                        style: TextStyle(
+                          fontSize: 26,
+                        ),
+                      ),
+                    ],
+                  ),
+                  //plus buttion
+
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.grey[400],
+                      borderRadius: BorderRadius.circular(10),
+                    ),
+                    child: IconButton(
+                        onPressed: () {
+                          print("You tapped! me");
+                        },
+                        icon: Icon(Icons.add)),
+                  )
+                ],
+              ),
+            ),
+            SizedBox(
+              height: 25,
+            ),
+
             // cards
-      
+            Container(
+              decoration: BoxDecoration(color: Colors.blue),
+              width: 350,
+              height: 250,
+            )
+
             //transaction button
-      
+
             // column stats + transaction
-      
           ],
         ),
       ),
